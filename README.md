@@ -1,72 +1,88 @@
-# VaxMS_FA24.SE34
-VaxMS - Vaccine Management System using React, NodeJs and Java Spring
-# Getting Started with Create React App
+VaxMS - Vaccine Management System
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+VaxMS is a comprehensive vaccine management system designed for vaccination centers. It enables customers to explore, book, and manage their vaccination schedules through a modern web interface, while also supporting real-time communication between staff and clients. The system is developed using a full-stack architecture with Java Spring Boot for the backend and React.js for the frontend.
 
-## Available Scripts
+✨ Key Features
 
-In the project directory, you can run:
+✉ Customer login and registration
 
-### `npm start`
+🔍 Vaccine browsing with disease type and pricing info
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+📅 Online appointment booking and payment
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+⚕️ Admin scheduling for vaccination sessions with doctors and nurses
 
-### `npm test`
+🏥 On-site check-in and direct payment support
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+🤖 Real-time chat with staff
 
-### `npm run build`
+🤖 AI-powered chatbot for automated support
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+📚 System Overview
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Frontend: React.js (in client-fe/ folder)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Backend: Java Spring Boot (in server/ folder)
 
-### `npm run eject`
+Database: MySQL (via phpMyAdmin)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+🚀 Getting Started
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Database Setup
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Import the provided vaxms.sql file into phpMyAdmin (port 3306).
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+This will initialize the database schema and seed data required to run the system.
 
-## Learn More
+2. Backend (Spring Boot)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Navigate to the server/ directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+cd server
 
-### Code Splitting
+Make sure you have Java and Maven installed, then run:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+./mvnw spring-boot:run
 
-### Analyzing the Bundle Size
+The backend will launch and connect to the configured MySQL database.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+3. Frontend (React App)
 
-### Making a Progressive Web App
+Navigate to the client-fe/ directory:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+cd client-fe
 
-### Advanced Configuration
+Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+npm install
 
-### Deployment
+Start the frontend app:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+npm start
 
-### `npm run build` fails to minify
+The application will automatically open in your default browser at the appropriate localhost address (usually something like http://localhost:3000).
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+📖 Project Structure
+
+VaxMS_FA24.SE34/
+├── client-fe/        # React frontend (user interface)
+├── server/           # Spring Boot backend (API, logic, DB connection)
+├── vaxms.sql         # MySQL database dump
+└── README.md         # Project documentation
+
+🔧 Developer Notes
+
+Use environment files or configuration classes to update DB credentials.
+
+Ensure port 3306 is available and MySQL is running.
+
+For deployment, consider Dockerizing the backend and frontend services.
+
+🌎 Authors & Contributors
+
+Developed by the VaxMS FA24.SE34 team. For contributions, please fork the repository and open a pull request.
+
+✨ License
+
+This project is licensed under the MIT License. See LICENSE for more details.
+
