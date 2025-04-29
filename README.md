@@ -1,88 +1,107 @@
-VaxMS - Vaccine Management System
+# VaxMS - Vaccine Management System
 
-VaxMS is a comprehensive vaccine management system designed for vaccination centers. It enables customers to explore, book, and manage their vaccination schedules through a modern web interface, while also supporting real-time communication between staff and clients. The system is developed using a full-stack architecture with Java Spring Boot for the backend and React.js for the frontend.
+**VaxMS** is a full-stack web application developed as a team capstone project for managing vaccination scheduling and operations at a vaccination center. The system provides an end-to-end solution allowing customers to view vaccine information, book appointments, and communicate with staff, while enabling administrators and medical personnel to manage schedules and patient interactions efficiently.
 
-✨ Key Features
+---
 
-✉ Customer login and registration
+## ✨ Key Features
 
-🔍 Vaccine browsing with disease type and pricing info
+- Secure customer registration and login
+- Vaccine catalog with detailed descriptions and pricing
+- Online appointment booking and scheduling interface
+- Integrated online and in-person payment methods
+- Admin dashboard for managing appointments and vaccine stock
+- Real-time chat support between staff and customers
+- AI chatbot for common customer inquiries
+- ... and many more features designed for streamlined vaccination management
 
-📅 Online appointment booking and payment
+---
 
-⚕️ Admin scheduling for vaccination sessions with doctors and nurses
+## 📚 Tech Stack
 
-🏥 On-site check-in and direct payment support
+- **Frontend:** React.js
+- **Backend:** Java Spring Boot
+- **Database:** MySQL
+- **Real-time Chat:** WebSocket
+- **AI Chatbot:** (integrated via custom logic)
 
-🤖 Real-time chat with staff
+---
 
-🤖 AI-powered chatbot for automated support
+## 🚀 Getting Started
 
-📚 System Overview
+### 1. Database Setup
 
-Frontend: React.js (in client-fe/ folder)
+1. Open **phpMyAdmin** on port `3306`.
+2. Import the provided `vaxms.sql` file to initialize the database schema and seed data.
 
-Backend: Java Spring Boot (in server/ folder)
+### 2. Backend Setup (Spring Boot)
 
-Database: MySQL (via phpMyAdmin)
+Navigate to the `server/` directory:
 
-🚀 Getting Started
-
-1. Database Setup
-
-Import the provided vaxms.sql file into phpMyAdmin (port 3306).
-
-This will initialize the database schema and seed data required to run the system.
-
-2. Backend (Spring Boot)
-
-Navigate to the server/ directory:
-
+```bash
 cd server
+```
 
-Make sure you have Java and Maven installed, then run:
+Then run:
 
+```bash
 ./mvnw spring-boot:run
+```
 
-The backend will launch and connect to the configured MySQL database.
+Ensure Java and Maven are properly installed. The backend will connect to the configured MySQL instance.
 
-3. Frontend (React App)
+### 3. Frontend Setup (React.js)
 
-Navigate to the client-fe/ directory:
+Navigate to the `client-fe/` directory:
 
+```bash
 cd client-fe
+```
 
-Install dependencies:
+Install the dependencies:
 
+```bash
 npm install
+```
 
-Start the frontend app:
+Start the React development server:
 
+```bash
 npm start
+```
 
-The application will automatically open in your default browser at the appropriate localhost address (usually something like http://localhost:3000).
+The app will automatically open in your browser at the appropriate `localhost` address (usually `http://localhost:3000`).
 
-📖 Project Structure
+---
 
+## 📁 Project Structure
+
+```
 VaxMS_FA24.SE34/
-├── client-fe/        # React frontend (user interface)
-├── server/           # Spring Boot backend (API, logic, DB connection)
-├── vaxms.sql         # MySQL database dump
-└── README.md         # Project documentation
+├── client-fe/        → React frontend (user interface)
+├── server/           → Spring Boot backend (API, logic, DB connection)
+├── vaxms.sql         → MySQL database schema & seed data
+└── README.md         → Project documentation
+```
 
-🔧 Developer Notes
+---
 
-Use environment files or configuration classes to update DB credentials.
+## 🛠 Developer Notes
 
-Ensure port 3306 is available and MySQL is running.
+- Ensure MySQL is running on port `3306`.
+- Update database credentials as needed in application properties.
+- Consider Docker for deployment (optional).
 
-For deployment, consider Dockerizing the backend and frontend services.
+---
 
-🌎 Authors & Contributors
+## 👨‍💻 Authors & Contributors
 
-Developed by the VaxMS FA24.SE34 team. For contributions, please fork the repository and open a pull request.
+Developed by the **VaxMS FA24.SE34** project team as part of a university group assignment.
 
-✨ License
+For improvements or bug fixes, please fork this repository and open a pull request.
 
-This project is licensed under the MIT License. See LICENSE for more details.
+---
 
+## 📄 License
+
+This project is licensed under the MIT License. See the `LICENSE` file for more details.
